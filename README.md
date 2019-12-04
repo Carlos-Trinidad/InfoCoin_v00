@@ -1,4 +1,5 @@
-# infocoin
+# InfoCoin
+InfoCoin is a final project for a Platzi Vuejs Basic Course. It uses Coincap API to check cryptocurrency values.
 
 ## Project setup
 ```
