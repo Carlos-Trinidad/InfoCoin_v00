@@ -5,7 +5,10 @@
         Crypto-coin current values (connected to Coincap API).<br>
         <b>Click on each coin</b> to see more information.
       </p>
-      <div class="coinLog" v-for="a in assets" :key="a.id">
+      <div class="search">
+        <input type="text" placeholder="Search..." v-model="filter">
+      </div>
+      <div class="coinLog" v-for="a in filteredAssets" :key="a.id">
           <img width="40px" :src="`https://static.coincap.io/assets/icons/${a.symbol.toLowerCase()}@2x.png`">
           <p class="info">
             <span>
@@ -58,7 +61,20 @@
 <script>
 export default {
   name: 'Tabla',
-	
+	data() {
+    return {
+      filter: ''
+    }
+  },
+  computed : {
+    filteredAssets() {
+      if(!this.filter) {return this.assets}
+      return this.assets.filter(a =>
+       a.symbol.toLowerCase().includes(this.filter.toLowerCase()) ||
+       a.name.toLowerCase().includes(this.filter.toLowerCase())
+       )
+    }
+  },
 	props: {
 		assets: {
 			type: Array,
