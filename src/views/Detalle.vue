@@ -4,9 +4,9 @@
             <div class="coin_holder">
                 <div class="image">
                     <ul>
-                        <li>
+                        <li class="coinlogo">
                             <img width="40px" :src="`https://static.coincap.io/assets/icons/${asset.symbol.toLowerCase()}@2x.png`">         
-                        </li><br>
+                        </li>
                         <li>
                             <p>
                                 <b>Rank</b>

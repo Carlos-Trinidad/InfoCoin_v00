@@ -143,6 +143,10 @@ html{
     color: $carbonblack;
     font-size: 1.6em;
     padding: 1.2rem;
+    @include xs-screen{
+        margin-top: 2rem;
+        font-size: 1.2em;
+    }
 }
 
 .footer_{
@@ -206,9 +210,14 @@ html{
 
 .search{
     margin-top: -1rem;
+    width: 90%;
+    display: block;
+    margin: auto;
     input{
-        padding: 1em;
-        margin: 3rem;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        margin-top: 1.6rem;
+        margin-bottom: 3rem;
         width: 70%;
         border-radius: 12px;
         border: none;
@@ -217,6 +226,9 @@ html{
         color: #512c96;
         border: 2px solid #512c96;
         text-align: center;
+        @include xs-screen{
+            margin-top: -1px;
+        }
     }
 }
 
@@ -227,6 +239,13 @@ html{
     margin: auto;
     ul{
         list-style-type: none;
+        .coinlogo{
+            display:block;
+            margin-bottom: 1rem;
+            @include m-screen{
+                display: block;
+            }
+        }
         li{
             display: inline-block;
             margin: 1.8rem;
