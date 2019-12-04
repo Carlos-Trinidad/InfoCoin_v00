@@ -60,7 +60,7 @@ html{
 }
 
 .coinLog{
-    width: 55%;
+    width: 75%;
     border-radius: 50px;
     padding: 0.667rem;
     background: #32407b;
@@ -70,6 +70,21 @@ html{
     font-size: 1.2em;
     font-family: $font-info;
     animation: fusion 2s;
+    .btn_link{
+      padding: 0.600rem;
+      font-family: $font-info;
+      font-size: 1em;
+      border-radius: 6px;
+      background-color: #f7beff;
+      border: none;
+      box-shadow: 2px 2px 15px $carbonblack;
+      color: #2d132c;
+      &:hover{
+          cursor: pointer;
+          color: white !important;
+          background-color: #801336 !important;
+      }
+    }
     @include m-screen{
         width: 20%;
         display: inline-block;
@@ -100,6 +115,27 @@ html{
             color: #f67280;
         }
     }
+    &:hover{
+        background-color: white;
+        color:navy !important;
+        .rlink{
+            color:navy !important;
+        }
+        .btn_link{
+            box-shadow: 2px 2px 15px #f7beff;
+            background-color: navy;
+            color: white;
+        }
+    }
+    .rlink{
+        color: white !important;
+        text-decoration: none;
+        font-weight: bold;
+        &:hover{
+          color: #f67280!important;
+          cursor: pointer;
+        }
+      }
 }
 
 .log_info{
@@ -123,11 +159,25 @@ html{
     }
 }
 
+.chart{
+    display: block;
+    margin: auto;
+    margin-top: 3rem;
+    margin-bottom: 7rem;
+    width: 80%;
+    @include m-screen{
+        width: 100%;
+    }
+}
+
 .rrss{
     margin-bottom: 5rem;
     p{
         font-family: $font-info;
         font-size: 1.6em;
+        @include m-screen{
+            font-size: 1.2em;
+        }
     }
     a{
         text-decoration: none;
@@ -146,6 +196,7 @@ html{
         background-color: #96d1c7;
         color: #940a37;
         box-shadow: 2px 1px 18px #96d1c7;
+        border: none;
         &:hover{
             cursor: pointer;
             background-color: #512c96;
@@ -154,6 +205,31 @@ html{
     }
 }
 
+.coin_holder{
+    padding-top: 1.2rem;
+    width: 95%;
+    display: block;
+    margin: auto;
+    ul{
+        list-style-type: none;
+        li{
+            display: inline-block;
+            margin: 1.8rem;
+            font-family: $font-info;
+            color: #512c96;
+            img{
+                position: relative;
+                top: 12px;
+            }
+            @include m-screen{
+                display: block;
+            }
+        }
+    }
+}
+.image{
+    width: 100%;
+}
 
 
 @keyframes fusion{

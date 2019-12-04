@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Error from '../views/Error.vue'
 import Contact from '../views/Contact.vue'
+import Detalle from '../views/Detalle.vue'
 
 Vue.use(VueRouter)
 
@@ -16,6 +17,11 @@ const routes = [
     path: '*',
     name: 'error',
     component: Error
+  },
+  {
+    path: '/detalle/:id',
+    name: 'detalle',
+    component: Detalle
   },
   {
     path: '/contact',
